@@ -1,0 +1,14 @@
+# conv-4-inspector — host patch layer.
+#
+# A plain `- id:` patch only *modifies* a row that already exists in the
+# composed tree; for a brand-new plugin the loader warns
+# `entry "conv-4-inspector" not found` and skips it. New rows are appended with
+# `insert`, the same shape dsh-web-tools uses for its own row.
+#
+# The browser half needs no row here: dsh-client-modules discovers it from
+# `dsh.client` in package.json and serves /plugins/conv-4-inspector/client.js.
+# `config` is plugin configuration validated against the plugin's Config schema,
+# not file paths — so it is intentionally absent.
+- insert:
+    - id: conv-4-inspector
+      name: '@jichong/conv-4-inspector'

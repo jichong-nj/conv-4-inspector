@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "LLM Conversation Monitor",
+    "description": "Per-session switch; tracks outbound LLM requests and their assembled responses."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "@jichong/conv-4-inspector",
+  "version": "1.0.1",
+  "description": "LLM对话监视器 — track and display outbound LLM requests and their assembled responses in the DSH conversation view",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "llm",
+    "inspector",
+    "devtools",
+    "observability"
+  ],
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "locale",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "prepare": "node build.js"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@jichong/conv-4-inspector": "^1.0.0"
+  }
+}
