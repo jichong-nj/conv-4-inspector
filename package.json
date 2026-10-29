@@ -1,7 +1,17 @@
 {
   "name": "@jichong/conv-4-inspector",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "LLM对话监视器 — track and display outbound LLM requests and their assembled responses in the DSH conversation view",
+  "license": "MIT",
+  "author": "jichong-nj",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jichong-nj/conv-4-inspector.git"
+  },
+  "homepage": "https://github.com/jichong-nj/conv-4-inspector#readme",
+  "bugs": {
+    "url": "https://github.com/jichong-nj/conv-4-inspector/issues"
+  },
   "keywords": [
     "dsh",
     "dsh-plugin",
@@ -47,8 +57,5 @@
   },
   "peerDependencies": {
     "react": "^18.2.0"
-  },
-  "dependencies": {
-    "@jichong/conv-4-inspector": "^1.0.0"
   }
 }
